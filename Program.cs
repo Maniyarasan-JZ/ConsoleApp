@@ -77,7 +77,7 @@ namespace Library
             }
         }
 
-        // 🔹 LOAD JSON
+        //LOAD JSON
         static async Task LoadBooksAsync()
         {
             try
@@ -109,7 +109,7 @@ namespace Library
             }
         }
 
-        // 🔹 SAVE JSON (🔥 FILE CREATED HERE)
+        // SAVE JSON (FILE CREATED HERE)
         static async Task SaveBooksAsync()
         {
             try
@@ -121,10 +121,10 @@ namespace Library
 
                 string json = JsonSerializer.Serialize(books, options);
 
-                // 🔥 This line CREATES the file if it doesn't exist
+                //This line CREATES the file if it doesn't exist
                 await File.WriteAllTextAsync(filePath, json);
 
-                Console.WriteLine("💾 Books saved.\n");
+                Console.WriteLine("Books saved.\n");
             }
             catch (Exception ex)
             {
